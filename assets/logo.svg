@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 64" width="232" height="64" role="img" aria-label="Goodmark">
+  <rect width="64" height="64" rx="16" fill="#15181e"/>
+  <path d="M18 33.5 L28 43.5" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M28 43.5 L47 21" fill="none" stroke="#3fd49a" stroke-width="7" stroke-linecap="round"/>
+  <text x="80" y="43" font-family="Bricolage Grotesque, Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="-0.8" fill="#15181e">Goodmark</text>
+</svg>

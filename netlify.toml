@@ -1,0 +1,5 @@
+# Netlify deploys the repository root as the site.
+# The build command removes repo-only files so they are not served on goodmarklabs.com.
+[build]
+  publish = "."
+  command = "rm -f README.md CLAUDE.md netlify.toml"
