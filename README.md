@@ -1,6 +1,6 @@
 # goodmarklabs.com
 
-Static website for Goodmark Limited. Plain HTML and CSS, no build step, no analytics. The only JavaScript is a few lines for the light/dark toggle, which remembers the choice in the browser's localStorage and sends nothing anywhere.
+Static website for Goodmark Limited. Plain HTML and CSS, no build step, no analytics. The only JavaScript is a few lines for the light/dark toggle, which remembers the choice in the browser's localStorage and sends nothing anywhere. The password reset page is the one exception: its script sends the new password to Firebase Authentication, and nothing else.
 
 ## Layout
 
@@ -12,6 +12,7 @@ Static website for Goodmark Limited. Plain HTML and CSS, no build step, no analy
 | `pocket-lyrics/privacy/index.html` | Privacy Policy |
 | `pocket-lyrics/terms/index.html` | Terms of Use |
 | `pocket-lyrics/delete-account/index.html` | Account deletion instructions (Google Play "account deletion URL") |
+| `pocket-lyrics/reset-password/index.html` | Password reset page, Firebase's custom action URL (not linked or indexed; see below) |
 | `404.html` | Not-found page (picked up automatically by Netlify, GitHub Pages and Cloudflare Pages) |
 | `assets/site.css` | All styles, light and dark via `prefers-color-scheme` plus the toggle |
 | `assets/fonts/` | Self-hosted Bricolage Grotesque (headings) and Instrument Sans (text), latin subsets, from Google Fonts (OFL licence) |
@@ -33,6 +34,10 @@ The source drafts for the legal pages live in the Pocket Lyrics project at `docs
 ## Replacing a product image
 
 Put the new image in `_source/`, then regenerate the sizes in `assets/img/` (16:9 crop, WebP at 640/960/1280/1664 wide, JPEG at 640/1280) and keep the same file names so the pages pick them up without edits.
+
+## Password reset page
+
+Firebase sends every account email's link here, with `mode`, `oobCode` and `apiKey` in the address, so no key is stored in this repository. The page calls Firebase's `accounts:resetPassword` API directly and loads no third-party scripts. Its 8-character minimum matches the app. It isn't in `sitemap.xml` and is marked `noindex`. The custom action URL is set in the Firebase console under Authentication > Templates, and applies to every email template.
 
 ## Previewing locally
 
