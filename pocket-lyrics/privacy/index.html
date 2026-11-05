@@ -67,7 +67,7 @@
         </ol>
       </nav>
       <article class="doc">
-        <p>Pocket Lyrics is a chord and lyric songbook app made by Goodmark Limited, a New Zealand company ("Goodmark", "we", "us"). This policy explains what information the app handles, where it is kept, and the choices you have. It applies to the Pocket Lyrics apps for iPhone, iPad, Android and the web, and to the Pocket Lyrics pages on this website.</p>
+        <p>Pocket Lyrics is a chord and lyric songbook app made by Goodmark Labs (Goodmark Limited, New Zealand), referred to here as "Goodmark", "we" or "us". This policy explains what information the app handles, where it is kept, and the choices you have. It applies to the Pocket Lyrics apps for iPhone, iPad, Android and the web, and to the Pocket Lyrics pages on this website.</p>
 
         <div class="summary">
           <p><strong>The short version:</strong> Pocket Lyrics stores your email address and the songs you type in, so that they sync between your devices. It has no ads, no analytics, no tracking, and we never sell or share your data for marketing. Sound from the microphone and any audio files you open are processed on your device and never leave it.</p>
@@ -79,9 +79,10 @@
         <ul>
           <li>your <strong>email address</strong>, and</li>
           <li>a <strong>user ID</strong> (a random code Firebase assigns to your account), and</li>
-          <li>your <strong>password</strong>, which is stored only in hashed form by Firebase Authentication. We cannot see it.</li>
+          <li>your <strong>password</strong>, if you sign in with one, which is stored only in hashed form by Firebase Authentication. We cannot see it.</li>
         </ul>
         <p>We use these to sign you in, to keep your songs attached to your account, to send password reset emails when you ask for one, and to answer support requests.</p>
+        <p>If you choose <strong>Continue with Google</strong> or <strong>Sign in with Apple</strong> instead, Google or Apple confirms who you are and sends us your <strong>email address</strong>, your <strong>name</strong>, a <strong>link to your profile picture</strong> (Google only) and an <strong>identifier</strong> for your Google or Apple account. We use the email address and identifier to sign you in and to find your account again. Firebase keeps the name and picture link in your account record, but the app does not show or use them. If you use Apple's Hide My Email, we receive the relay address Apple creates for you instead of your real one. The sign-in itself happens between your device and Google or Apple under their own privacy policies; we never see your Google or Apple password.</p>
 
         <h3>Your songs and sets</h3>
         <p>Everything you add in the app is stored in your account so it can sync between your devices:</p>
@@ -106,13 +107,15 @@
 
         <h2 id="where">2. Where your information is kept</h2>
         <p>Your songs and sets are stored in Google Cloud Firestore in the <strong>australia-southeast1 (Sydney, Australia)</strong> region, using Google's Firebase service. Each device also keeps an offline copy of your own songs so the app works without a connection; that copy is removed when you sign out or delete your account.</p>
-        <p>Account records (your email address, user ID and hashed password) are handled by Firebase Authentication. Google may store these in other regions, including the United States.</p>
+        <p>Account records (your email address, user ID, hashed password or Google/Apple sign-in details) are handled by Firebase Authentication. Google may store these in other regions, including the United States.</p>
         <p>Google processes this information on our behalf under the <a href="https://firebase.google.com/terms/data-processing-terms">Google Cloud / Firebase data processing terms</a> and does not use it for its own purposes.</p>
 
         <h2 id="services">3. Other services the app uses</h2>
         <ul>
           <li><strong>App updates.</strong> The app checks Expo's update service (expo.dev) for new versions of its code. That check sends the app's platform, version and a random installation identifier used to roll updates out gradually. If the app's update system fails to start, the next check can also send Expo a short technical error message (up to 1,024 characters) and the IDs of any updates that failed to load. The app does not add your email, account or songs to any of this.</li>
+          <li><strong>Firebase technical details.</strong> Firebase receives your IP address and device details, such as the device model and operating system version, for security and to keep its service running. They are not used for tracking or to work out your location.</li>
           <li><strong>Password reset emails</strong> are sent through Firebase on our behalf.</li>
+          <li><strong>Google and Apple sign-in.</strong> If you sign in with Google or Apple, your device talks to Google or Apple directly to confirm who you are. Their privacy policies apply to that step: <a href="https://policies.google.com/privacy">Google</a> and <a href="https://www.apple.com/legal/privacy/">Apple</a>.</li>
           <li><strong>YouTube links</strong> you add open in the YouTube app or your browser. From that point YouTube's own privacy policy applies.</li>
           <li><strong>App stores.</strong> When you buy the app or a subscription, Apple or Google handles the payment under their own terms and privacy policies. We receive no card details.</li>
         </ul>
@@ -141,7 +144,7 @@
         <p>Support emails are kept for up to 2 years after the request is resolved, then deleted.</p>
 
         <h2 id="deleting">7. Deleting your account</h2>
-        <p>You can delete your account yourself at any time: open <strong>Settings</strong>, tap <strong>Delete account</strong>, and enter your password. This removes your account, every song and every set, and signs you out of all devices. If you cannot use the app, email us from your account's email address and we will delete it within 30 days. Full instructions: <a href="/pocket-lyrics/delete-account/">goodmarklabs.com/pocket-lyrics/delete-account</a></p>
+        <p>You can delete your account yourself at any time: open <strong>Settings</strong>, tap <strong>Delete account</strong>, and enter your password (or confirm with Google or Apple if that is how you sign in). This removes your account, every song and every set, and signs you out of all devices. If you cannot use the app, email us from your account's email address and we will delete it within 30 days. Full instructions: <a href="/pocket-lyrics/delete-account/">goodmarklabs.com/pocket-lyrics/delete-account</a></p>
         <p>If you want to keep your songs, use <strong>Settings &gt; Import &amp; export &gt; Export all songs</strong> first. It gives you a ChordPro (.cho) text file you can open anywhere.</p>
 
         <h2 id="rights">8. Your rights</h2>
@@ -177,7 +180,7 @@
         <p>If we change this policy in a way that matters, we will show a notice in the app or email you before the change takes effect. The effective date at the top tells you when it was last updated.</p>
 
         <h2 id="contact">12. Contact</h2>
-        <p class="contact-block">Goodmark Limited, New Zealand<br>Email: <a href="mailto:support@goodmarklabs.com"><strong>support@goodmarklabs.com</strong></a></p>
+        <p class="contact-block">Goodmark Labs (Goodmark Limited, New Zealand)<br>Email: <a href="mailto:support@goodmarklabs.com"><strong>support@goodmarklabs.com</strong></a></p>
       </article>
     </div>
   </main>
@@ -214,7 +217,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Goodmark Limited, New Zealand</p>
+        <p>&copy; 2026 Goodmark Labs (Goodmark Limited, New Zealand)</p>
         <p>No analytics, no cookies, no trackers.</p>
       </div>
     </div>

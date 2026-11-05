@@ -27,7 +27,7 @@ Clean URLs work because every page is a folder containing `index.html`. Links us
 
 ## Before publishing
 
-No placeholders remain. The effective date is 5 November 2026 on the privacy and delete-account pages and 3 November 2026 on the terms; change a page's date whenever its text changes.
+No placeholders remain. The effective date on the privacy, terms and delete-account pages is 5 November 2026; change a page's date whenever its text changes.
 
 The source drafts for the legal pages live in the Pocket Lyrics project at `docs/website/*.md`. Keep both in sync.
 
