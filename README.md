@@ -1,6 +1,6 @@
 # goodmarklabs.com
 
-Static website for Goodmark Limited. Plain HTML and CSS, no build step, no analytics. The only JavaScript is a few lines for the light/dark toggle, which remembers the choice in the browser's localStorage and sends nothing anywhere. The password reset page is the one exception: its script sends the new password to Firebase Authentication, and nothing else.
+Static website for Goodmark Labs, the trading name of Goodmark Limited. Plain HTML and CSS, no build step, no analytics. The only JavaScript is a few lines for the light/dark toggle, which remembers the choice in the browser's localStorage and sends nothing anywhere. The password reset page is the one exception: its script sends the new password to Firebase Authentication, and nothing else.
 
 ## Layout
 
@@ -13,7 +13,8 @@ Static website for Goodmark Limited. Plain HTML and CSS, no build step, no analy
 | `pocket-lyrics/terms/index.html` | Terms of Use |
 | `pocket-lyrics/delete-account/index.html` | Account deletion instructions (Google Play "account deletion URL") |
 | `pocket-lyrics/reset-password/index.html` | Password reset page, Firebase's custom action URL (not linked or indexed; see below) |
-| `404.html` | Not-found page (picked up automatically by Netlify, GitHub Pages and Cloudflare Pages) |
+| `404.html` | Not-found page, served by GitHub Pages for any missing address |
+| `.github/workflows/pages.yml` | Publishes the site files to GitHub Pages on every push to `main` |
 | `assets/site.css` | All styles, light and dark via `prefers-color-scheme` plus the toggle |
 | `assets/fonts/` | Self-hosted Bricolage Grotesque (headings) and Instrument Sans (text), latin subsets, from Google Fonts (OFL licence) |
 | `assets/logo.svg`, `assets/favicon.svg` | Goodmark logo and mark |
@@ -49,6 +50,6 @@ then open http://localhost:8000 in a browser.
 
 ## Publishing
 
-The site is in the public GitHub repository `Goodmarklabs/goodmark-website`. Netlify watches the `main` branch and publishes the repository root on every push, so deploying is: commit, then push. `netlify.toml` removes the repo-only files (this README, CLAUDE.md, netlify.toml) from the deploy so they are not served on goodmarklabs.com. `_source/`, `publish/` and `.DS_Store` are ignored by git.
+The site is in the public GitHub repository `Goodmarklabs/goodmark-website` and is served by GitHub Pages. On every push to `main`, the workflow in `.github/workflows/pages.yml` copies only the site files (pages, `assets/`, `favicon.ico`, `robots.txt`, `sitemap.xml`) into the deployment, so this README, CLAUDE.md, the workflow itself and `_source/` are never served. Deploying is: commit, then push. The custom domain goodmarklabs.com is set in the repository's Pages settings; `www.goodmarklabs.com` redirects to it.
 
-`publish/` is only needed for a manual drag-and-drop upload. It is a snapshot of the files the live site needs; refresh it by copying changed files across before using it.
+`_source/` and `.DS_Store` are ignored by git.
