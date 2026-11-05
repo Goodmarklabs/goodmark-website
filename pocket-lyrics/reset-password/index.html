@@ -11,7 +11,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/site.css?v=20261103b">
+  <link rel="stylesheet" href="/assets/site.css?v=20261105">
   <style>
     body { background: var(--pl-charcoal); color: var(--pl-text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.5rem 1rem; }
     .reset { flex: none; width: 100%; max-width: 26rem; display: grid; gap: 1.5rem; }
@@ -42,7 +42,7 @@
     .submit:hover { filter: brightness(1.05); }
     .submit:focus-visible { outline: 2px solid var(--pl-text); outline-offset: 2px; }
     .submit[disabled] { opacity: 0.6; cursor: default; }
-    .reset-foot { text-align: center; font-size: 0.85rem; color: var(--pl-muted); }
+    .reset-foot { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.75rem; text-align: center; font-size: 0.85rem; color: var(--pl-muted); }
     .reset-foot a { color: var(--pl-muted); }
   </style>
 </head>
@@ -90,7 +90,7 @@
 
     <noscript><p class="reset-foot">This page needs JavaScript to reset your password.</p></noscript>
 
-    <p class="reset-foot">Goodmark Labs (Goodmark Limited, New Zealand) · <a href="/pocket-lyrics/privacy/">Privacy Policy</a></p>
+    <p class="reset-foot"><span>Goodmark Labs (Goodmark Limited, New Zealand)</span><a href="/pocket-lyrics/privacy/">Privacy Policy</a></p>
   </main>
 
   <script>
