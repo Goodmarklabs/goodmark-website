@@ -103,6 +103,9 @@
     var mode = query.get('mode');
     var code = query.get('oobCode');
     var apiKey = query.get('apiKey');
+    // Firebase adds the account's language; the page is English, but the tag helps screen readers and translation.
+    var lang = query.get('lang');
+    if (lang && /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$/.test(lang)) document.documentElement.lang = lang;
 
     var $ = function (id) { return document.getElementById(id); };
     var sections = ['checking', 'choose', 'done', 'problem'];
@@ -190,7 +193,18 @@
       });
     });
 
+    /* Firebase sends every kind of account email to this page. Pocket Lyrics only uses password
+       resets, so the other kinds get a plain explanation rather than a form. */
+    var OTHER_MODES = {
+      verifyEmail: ['No need to verify your email', 'Pocket Lyrics doesn’t ask you to verify your email address, so there’s nothing to do here. You can sign in to the app as usual.'],
+      verifyAndChangeEmail: ['Email addresses aren’t changed this way', 'Pocket Lyrics doesn’t change the email address on an account from a link, so this one does nothing. If you didn’t expect this email, your account is unchanged; please contact us if you’re unsure.'],
+      recoverEmail: ['Nothing to undo', 'This kind of link undoes a change of email address, but Pocket Lyrics accounts don’t change their email address, so there’s nothing to undo. If you didn’t expect this email, please contact us.'],
+      revertSecondFactorAddition: ['Two-step verification isn’t used', 'Pocket Lyrics doesn’t use two-step verification, so this link has nothing to undo. If you didn’t expect this email, please contact us.']
+    };
     if (mode && mode !== 'resetPassword') {
+      forgetLink();
+      var other = OTHER_MODES[mode];
+      if (other) return fail(other[0], other[1]);
       return fail('This link can’t be used here', 'This page only resets passwords. Please contact us and we’ll sort it out.');
     }
     if (!code || !apiKey) {
