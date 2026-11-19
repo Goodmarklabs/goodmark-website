@@ -336,6 +336,10 @@ main { flex: 1; }
 .pl-hero h1 { font-size: clamp(2.5rem, 1.5rem + 4vw, 4rem); letter-spacing: -0.035em; margin-bottom: 1rem; color: #fff; }
 .pl-hero .lede { color: var(--pl-muted); margin-bottom: 1.75rem; }
 .pl-hero .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+/* Two rows: store badges, then the text buttons, each row kept together. */
+.pl-hero .actions--rows { flex-direction: column; align-items: flex-start; gap: 1rem; }
+.pl-hero .action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+@media (max-width: 24rem) { .pl-hero .action-row { gap: 0.5rem; } .pl-hero .action-row .btn { padding-left: 0.95rem; padding-right: 0.95rem; } }
 .pl-pill { background: rgba(251, 197, 156, 0.16); color: var(--pl-peach); }
 .pl-hero .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.25); }
 .pl-hero .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.5); }
