@@ -193,6 +193,8 @@ button { font: inherit; color: inherit; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); }
 .header-actions { display: flex; align-items: center; gap: 0.5rem; }
 @media (max-width: 40rem) { .header-actions .btn { display: none; } }
+/* Home: on phones keep the theme toggle beside the logo and give the nav its own row. */
+@media (max-width: 40rem) { .site-header--split .site-nav { order: 3; flex-basis: 100%; } }
 
 .theme-toggle {
   width: 36px; height: 36px; border-radius: 999px;
@@ -234,8 +236,6 @@ main { flex: 1; }
 }
 .hero .lede { font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem); max-width: 38rem; margin-bottom: 2.25rem; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.hero-note { margin-top: 3.5rem; color: var(--text-2); font-size: 0.95rem; display: flex; align-items: center; gap: 0.6rem; }
-.hero-note .mark { width: 20px; height: 20px; }
 
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .hero .wrap > * { animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
@@ -365,7 +365,7 @@ main { flex: 1; }
 .feature-title { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.35rem; }
 .feature-title h3 { margin-bottom: 0; }
 .feature .pill { font-size: 0.72rem; padding: 0.3rem 0.55rem; flex-shrink: 0; }
-.features-note { margin-top: 1.25rem; color: var(--text-2); font-size: 0.95rem; max-width: 40rem; }
+.features-note { margin-top: 1.25rem; color: var(--text-2); font-size: 0.95rem; max-width: 46rem; text-wrap: pretty; }
 .feature p { color: var(--text-2); font-size: 0.98rem; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .feature svg { color: var(--pl-lavender); } :root:not([data-theme="light"]) .feature:hover { border-color: var(--pl-lavender); } }
 :root[data-theme="dark"] .feature svg { color: var(--pl-lavender); }
