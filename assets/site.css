@@ -286,8 +286,9 @@ main { flex: 1; }
 .product-art picture { display: block; }
 .product-art img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
 .product-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
-.product-title { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.product-title { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1rem; }
 .product-title h3 { font-size: 1.5rem; }
+.product-title .pill { line-height: 1.25; text-wrap: balance; }
 .product-body p { color: var(--text-2); }
 .product-foot { margin-top: auto; padding-top: 0.75rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
 .product .stretch::after { content: ""; position: absolute; inset: 0; }
