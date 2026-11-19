@@ -388,6 +388,13 @@ main { flex: 1; }
 }
 .platform svg { width: 18px; height: 18px; }
 
+/* Official store badges, shown unaltered. The Google Play PNG has built-in clear space,
+   so it is drawn larger and pulled back by that margin to match the App Store badge's height. */
+.store-badge { display: inline-block; line-height: 0; border-radius: 8px; }
+.store-badge img { display: block; width: auto; }
+.store-badge--play img { height: 70px; margin: -11px; }
+.store-badge--apple img { height: 48px; }
+
 .link-cards {
   list-style: none; margin: 0; padding: 0;
   display: grid; gap: 1rem;

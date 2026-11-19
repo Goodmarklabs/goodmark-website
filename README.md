@@ -19,6 +19,7 @@ Static website for Goodmark Labs, the trading name of Goodmark Limited. Plain HT
 | `assets/fonts/` | Self-hosted Bricolage Grotesque (headings) and Instrument Sans (text), latin subsets, from Google Fonts (OFL licence) |
 | `assets/logo.svg`, `assets/favicon.svg` | Goodmark logo and mark |
 | `assets/pocket-lyrics-icon-*.png` | Pocket Lyrics app icon, copied from the app project |
+| `assets/badges/` | Official store badges, unaltered: `google-play.png` from Google's badge page (it includes Google's clear space) and `app-store.svg` from Apple's marketing resources |
 | `assets/img/` | Product images as WebP (640, 960, 1280 and 1664 px wide) with JPEG fallbacks (640 and 1280 px), all cropped to 16:9 |
 | `_source/` | The original PNGs the product images were made from. Not linked from any page; safe to leave out of a deploy |
 | `assets/`, `favicon.ico` | Other icons |
