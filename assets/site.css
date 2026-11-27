@@ -371,6 +371,7 @@ main { flex: 1; }
 .feature .pill { font-size: 0.72rem; padding: 0.3rem 0.55rem; flex-shrink: 0; }
 .features-note { margin-top: 1.25rem; color: var(--text-2); font-size: 0.95rem; max-width: 46rem; text-wrap: pretty; }
 .feature p { color: var(--text-2); font-size: 0.98rem; }
+.price-note { margin-top: 0.4rem; color: var(--text-2); font-size: 0.85rem; max-width: 46rem; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .feature svg { color: var(--pl-lavender); } :root:not([data-theme="light"]) .feature:hover { border-color: var(--pl-lavender); } }
 :root[data-theme="dark"] .feature svg { color: var(--pl-lavender); }
 :root[data-theme="dark"] .feature:hover { border-color: var(--pl-lavender); }
